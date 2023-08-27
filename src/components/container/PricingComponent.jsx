@@ -1,5 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 
+const buttonVariants = {
+  hover: {
+    scale: 1.1,
+    textShadow: "0px 0px 8px rgb(255, 255, 255)",
+    boxShadow: "0px 0px 80px #0d0c0c",
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 0.3,
+    },
+  },
+};
 export default function PricingComponent(props) {
   return (
     <div className="pricing-comp-item">
@@ -11,7 +24,9 @@ export default function PricingComponent(props) {
       <p>{props.storage} Gb of storage</p>
       <p>{props.support} support</p>
       <p>Help center access</p>
-      <button>{props.button}</button>
+      <motion.button variants={buttonVariants} whileHover="hover">
+        {props.button}
+      </motion.button>
     </div>
   );
 }
