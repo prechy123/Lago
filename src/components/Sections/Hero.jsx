@@ -7,14 +7,14 @@ const buttonVariants = {
 };
 const containerVarients = {
   initial: {
-    y: "100vw",
+    x: "100vw",
     opacity: 0,
   },
   animate: {
-    y: 0,
+    x: 0,
     opacity: 1,
     transition: {
-      duration: 1.5,
+      duration: 1.3,
     },
   },
 };

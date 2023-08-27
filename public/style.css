@@ -14,6 +14,9 @@
     box-sizing: border-box;
     color: var(--color3);
 }
+body{
+    overflow-x: hidden;
+}
 
 header{
     border-bottom: 1.5px solid var(--color1);
@@ -167,6 +170,7 @@ header ul li a {
 #solution {
     width: 100%;
     height: 300vh;
+    padding: 20px;
 }
 #solution .d-solution {
     display: flex;

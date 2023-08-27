@@ -1,8 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function GridTextItem(props) {
   return (
-    <div className="q-item">
+    <motion.div className="q-item" initial={{x: "100px"}} whileInView={{x: 0}} transition={{duration: 2}}>
       <p>{props.para}</p>
       <h1>{props.title}</h1>
       <p>
@@ -11,6 +12,6 @@ export default function GridTextItem(props) {
         sint, rerum nulla cupiditate fugiat laudantium, tempore autem itaque
         architecto, illum quam.
       </p>
-    </div>
+    </motion.div>
   );
 }
