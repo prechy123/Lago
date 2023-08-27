@@ -7,28 +7,10 @@ import ProductsUpdate from "./ProductsUpdate";
 import Footer from "../default/footer";
 import { motion } from "framer-motion";
 
-const mainVariants = {
-  initial: {
-    x: "-100vw",
-    opacity: 0,
-  },
-  animate: {
-    x: "0",
-    opacity: 1,
-    transition: {
-      duration: 3,
-    },
-  },
-};
 
 export default function Main() {
   return (
-    <motion.div
-      id="main"
-      variants={mainVariants}
-      initial="initial"
-      animate="animate"
-    >
+    <motion.div>
       <Hero />
       <Next1 />
       <Solution />

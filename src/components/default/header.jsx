@@ -5,53 +5,53 @@ import { motion } from "framer-motion";
 function Header() {
   const headerVariants = {
     initial: {
-      y: "-100vh",
+      x: "150px",
       opacity: 0,
     },
     animate: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
-        type: "String",
-        delay: 0.4,
-        duration: 3
+        type: "spring",
+        duration: 2,
+        staggerChildren: 0.2, // Adjust the stagger delay as needed
       },
     },
   };
   return (
     <>
-      <motion.header
-        variants={headerVariants}
-        initial="initial"
-        animate="animate"
-      >
+      <header>
         <div>
-          <ul>
-            <h2>
+          <motion.ul
+            variants={headerVariants}
+            initial="initial"
+            animate="animate"
+          >
+            <motion.h2 variants={headerVariants}>
               <Link to="/">Lago</Link>
-            </h2>
-            <li>
+            </motion.h2>
+            <motion.li variants={headerVariants}>
               <Link to="/">Product</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={headerVariants}>
               <Link to="/">Developers</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={headerVariants}>
               <Link to="pricing">Pricing</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={headerVariants}>
               <Link to="/">Integration</Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={headerVariants}>
               <Link to="about">About</Link>
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
         <div className="nav-right">
           <button>Star|3.928</button>
           <button>Book a demo</button>
         </div>
-      </motion.header>
+      </header>
 
       <main>
         <Outlet />
