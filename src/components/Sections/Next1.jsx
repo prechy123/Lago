@@ -34,61 +34,80 @@ export default function Next1() {
             alt="Logo"
             width={100}
             variants={containerVarients}
-            
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo2}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo2}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo2}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo2}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
           <motion.img
             src={logo2}
             alt="Logo"
             width={100}
             variants={containerVarients}
+            drag
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
           />
         </div>
       </div>
