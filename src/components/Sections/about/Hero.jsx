@@ -19,7 +19,7 @@ const gridVariants = {
   animate: {
     x: 0,
     transition: {
-      delay: 1.5,
+      delay: 1.3,
       when: "beforeChildren",
       staggerChildren: 0.3,
       duration: 1
