@@ -1,5 +1,19 @@
 import { useState } from "react";
 import ProductUpdateTemplate from "../container/ProductUpdateTemplate";
+import { motion } from "framer-motion";
+
+const updateVariants = {
+  initial: {
+    y: -100,
+  },
+  animate: {
+    y: 0,
+    transition: {
+      duration: 2,
+      staggerChildren: 0.5,
+    },
+  },
+};
 
 export default function ProductsUpdate() {
   const [state, setState] = useState(false);
@@ -16,12 +30,17 @@ export default function ProductsUpdate() {
           <p>Product update</p>
           <h1>We ship fast and it's only the beginning</h1>
         </div>
-        <div className="product-template">
+        <motion.div
+          className="product-template"
+          variants={updateVariants}
+          initial="initial"
+          whileInView="animate"
+        >
           <ProductUpdateTemplate update="Update #21 - june 12, 2023" />
           <ProductUpdateTemplate update="Update #20 - june 6, 2023" />
           <ProductUpdateTemplate update="Update #19 - june 1, 2023" />
           {state && (
-            <>    
+            <>
               <ProductUpdateTemplate update="Update #18 - may 20, 2023" />
               <ProductUpdateTemplate update="Update #17 - may 10, 2023" />
               <ProductUpdateTemplate update="Update #16 - may 1, 2023" />
@@ -33,7 +52,7 @@ export default function ProductsUpdate() {
               <ProductUpdateTemplate update="Update #10 - march 1, 2023" />
             </>
           )}
-        </div>
+        </motion.div>
         <div className="show-updates">
           {/* <button onClick={handleOnClick}>See all updates</button> */}
           {state ? (
