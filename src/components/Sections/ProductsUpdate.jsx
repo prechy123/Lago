@@ -10,7 +10,6 @@ const updateVariants = {
     y: 0,
     transition: {
       duration: 2,
-      staggerChildren: 0.5,
     },
   },
 };

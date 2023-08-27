@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 
-const updateVariants = {
+const childVariants = {
   initial: {
     y: -100,
     opacity: 0
   },
   animate: {
     y: 0,
-    opacity: 1
+    opacity: 1,
+    transition: {
+      duration: 2
+    }
   },
 };
 
@@ -15,7 +18,7 @@ export default function ProductUpdateTemplate({ update }) {
   return (
     <motion.div
       className="featured-component"
-      variants={updateVariants}
+      variants={childVariants}
       initial="initial"
       animate="animate"
     >
