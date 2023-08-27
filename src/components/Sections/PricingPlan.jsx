@@ -4,13 +4,14 @@ import PricingComponent from "../container/PricingComponent";
 
 export default function PricingPlan() {
   return (
+    <>
     <section id="pricing">
       <div className="pricing-title">
         <h1>Fair pricing for all</h1>
         <p>No cut on the revenue. No lock-in.</p>
       </div>
       <div className="pricing-comp">
-        <PricingComponent 
+        <PricingComponent
           type="Free"
           price="$0"
           users="10"
@@ -35,7 +36,9 @@ export default function PricingPlan() {
           button="Contact us"
         />
       </div>
-      <Footer />
+      
     </section>
+    <Footer />
+    </>
   );
 }
