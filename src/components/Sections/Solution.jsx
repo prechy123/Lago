@@ -1,8 +1,23 @@
 import GridTextItem from "../container/GridTextItem";
+import { motion } from "framer-motion";
 
+const containerVarients = {
+  initial: {
+    y: "100px",
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      staggerChildren: 0.1,
+    },
+  },
+};
 export default function Solution() {
   return (
-    <section id="solution">
+    <motion.section id="solution" variants={containerVarients} initial="initial" whileInView="animate">
       <div className="d-solution">
         <div className="d-solution-title">
           <p>The Solution</p>
@@ -27,6 +42,6 @@ export default function Solution() {
           <div className="g-item"></div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

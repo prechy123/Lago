@@ -34,6 +34,7 @@ export default function Next1() {
             alt="Logo"
             width={100}
             variants={containerVarients}
+            
           />
           <motion.img
             src={logo2}
