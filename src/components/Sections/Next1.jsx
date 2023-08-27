@@ -6,33 +6,89 @@ import { motion } from "framer-motion";
 
 const containerVarients = {
   initial: {
-    // x: "100vw",
+    y: "100px",
     opacity: 0,
   },
   animate: {
-    // x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       duration: 2,
+      staggerChildren: 0.1,
     },
   },
 };
 export default function Next1() {
   return (
-    <motion.section id="next1" variants={containerVarients} initial="initial" whileInView="animate">
+    <motion.section
+      id="next1"
+      variants={containerVarients}
+      initial="initial"
+      whileInView="animate"
+    >
       <div className="brands">
         <p>With developer signup from the world's leading brands</p>
         <div>
-          <img src={logo} alt="Logo" width={100} />
-          <img src={logo2} alt="Logo" width={100} />
-          <img src={logo} alt="Logo" width={100} />
-          <img src={logo2} alt="Logo" width={100} />
-          <img src={logo} alt="Logo" width={100} />
-          <img src={logo2} alt="Logo" width={100} />
-          <img src={logo} alt="Logo" width={100} />
-          <img src={logo2} alt="Logo" width={100} />
-          <img src={logo} alt="Logo" width={100} />
-          <img src={logo2} alt="Logo" width={100} />
+          <motion.img
+            src={logo}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo2}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo2}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo2}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo2}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
+          <motion.img
+            src={logo2}
+            alt="Logo"
+            width={100}
+            variants={containerVarients}
+          />
         </div>
       </div>
       <div className="the-problem">
