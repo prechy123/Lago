@@ -1,10 +1,28 @@
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Header() {
+  const headerVariants = {
+    initial: {
+      y: "-100vh",
+    },
+    animate: {
+      y: 0,
+      transition: {
+        type: "String",
+        delay: 0.4,
+        duration: 5,
+      },
+    },
+  };
   return (
     <>
-      <header>
+      <motion.header
+        variants={headerVariants}
+        initial="initial"
+        animate="animate"
+      >
         <div>
           <ul>
             <h2>
@@ -31,7 +49,7 @@ function Header() {
           <button>Star|3.928</button>
           <button>Book a demo</button>
         </div>
-      </header>
+      </motion.header>
 
       <main>
         <Outlet />
