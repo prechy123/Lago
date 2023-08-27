@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function GridTextItem(props) {
   return (
-    <motion.div className="q-item" initial={{x: "100px"}} whileInView={{x: 0}} transition={{duration: 2}}>
+    <motion.div className="q-item" initial={{x: "-250px"}} whileInView={{x: 0}} transition={{duration: 2}}>
       <p>{props.para}</p>
       <h1>{props.title}</h1>
       <p>
