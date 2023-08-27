@@ -18,6 +18,21 @@ function Header() {
       },
     },
   };
+  const headerVariants2 = {
+    initial: {
+      x: "-150px",
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 2,
+        staggerChildren: 0.2, // Adjust the stagger delay as needed
+      },
+    },
+  };
   return (
     <>
       <header>
@@ -47,10 +62,15 @@ function Header() {
             </motion.li>
           </motion.ul>
         </div>
-        <div className="nav-right">
-          <button>Star|3.928</button>
-          <button>Book a demo</button>
-        </div>
+        <motion.div
+          className="nav-right"
+          variants={headerVariants2}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.button variants={headerVariants2}>Star|3.928</motion.button>
+          <motion.button variants={headerVariants2}>Book a demo</motion.button>
+        </motion.div>
       </header>
 
       <main>

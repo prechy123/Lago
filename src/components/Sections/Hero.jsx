@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 const buttonVariants = {
   whileHover: {
-    scale: 0.7,
+    scale: 1.1,
+    textShadow: "0px 0px 8px rgb(255, 255, 255)",
   },
-  whileTap: {
-    scale: 1.3
-  }
 };
 
 export default function Hero() {
@@ -21,10 +19,10 @@ export default function Hero() {
             </p>
           </div>
           <div className="l-side-buttons">
-            <motion.button variants={buttonVariants} whileHover="whileHover" whileTap="whileTap"> 
+            <motion.button variants={buttonVariants} whileHover="whileHover"> 
               Book a demo
             </motion.button>
-            <motion.button variants={buttonVariants} whileHover="whileHover" whileTap="whileTap">
+            <motion.button variants={buttonVariants} whileHover="whileHover">
               Deploy Open Source
             </motion.button>
           </div>
