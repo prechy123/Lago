@@ -2,10 +2,24 @@ import React from "react";
 import logo from "./img/index.png";
 import logo2 from "./img/logo.jpg";
 import ProblemContainer from "../container/problemContainer";
+import { motion } from "framer-motion";
 
+const containerVarients = {
+  initial: {
+    // x: "100vw",
+    opacity: 0,
+  },
+  animate: {
+    // x: 0,
+    opacity: 1,
+    transition: {
+      duration: 2,
+    },
+  },
+};
 export default function Next1() {
   return (
-    <section id="next1">
+    <motion.section id="next1" variants={containerVarients} initial="initial" whileInView="animate">
       <div className="brands">
         <p>With developer signup from the world's leading brands</p>
         <div>
@@ -39,6 +53,6 @@ export default function Next1() {
           <ProblemContainer title="For Finance teams" />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -68,12 +68,12 @@ header ul li a {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    padding: 20px;
 }
 
 #hero .l-side {
     width: 47%;
-    padding: 30px;
     padding-top: 120px;
 }
 #hero .l-side .l-side-c {

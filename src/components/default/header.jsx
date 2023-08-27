@@ -62,15 +62,10 @@ function Header() {
             </motion.li>
           </motion.ul>
         </div>
-        <motion.div
-          className="nav-right"
-          variants={headerVariants2}
-          initial="initial"
-          animate="animate"
-        >
-          <motion.button variants={headerVariants2}>Star|3.928</motion.button>
-          <motion.button variants={headerVariants2}>Book a demo</motion.button>
-        </motion.div>
+        <div className="nav-right">
+          <button>Star|3.928</button>
+          <button>Book a demo</button>
+        </div>
       </header>
 
       <main>

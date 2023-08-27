@@ -5,11 +5,24 @@ const buttonVariants = {
     textShadow: "0px 0px 8px rgb(255, 255, 255)",
   },
 };
+const containerVarients = {
+  initial: {
+    y: "100vw",
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+    },
+  },
+};
 
 export default function Hero() {
   return (
     <>
-      <section id="hero">
+      <motion.section id="hero" variants={containerVarients} initial="initial" animate="animate">
         <div className="l-side">
           <div className="l-side-c">
             <h1>Open-source metering and usage -based billing</h1>
@@ -19,7 +32,7 @@ export default function Hero() {
             </p>
           </div>
           <div className="l-side-buttons">
-            <motion.button variants={buttonVariants} whileHover="whileHover"> 
+            <motion.button variants={buttonVariants} whileHover="whileHover">
               Book a demo
             </motion.button>
             <motion.button variants={buttonVariants} whileHover="whileHover">
@@ -27,8 +40,8 @@ export default function Hero() {
             </motion.button>
           </div>
         </div>
-        <div className="r-side"></div>
-      </section>
+        <motion.div className="r-side"></motion.div>
+      </motion.section>
     </>
   );
 }

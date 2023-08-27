@@ -5,18 +5,18 @@ import Solution from "./Solution";
 import Featured from "./Featured";
 import ProductsUpdate from "./ProductsUpdate";
 import Footer from "../default/footer";
-import { motion } from "framer-motion";
+
 
 
 export default function Main() {
   return (
-    <motion.div>
+    <div>
       <Hero />
       <Next1 />
       <Solution />
       <Featured />
       <ProductsUpdate />
       <Footer />
-    </motion.div>
+    </div>
   );
 }
