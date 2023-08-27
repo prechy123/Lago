@@ -6,13 +6,15 @@ function Header() {
   const headerVariants = {
     initial: {
       y: "-100vh",
+      opacity: 0,
     },
     animate: {
       y: 0,
+      opacity: 1,
       transition: {
         type: "String",
         delay: 0.4,
-        duration: 5,
+        duration: 3
       },
     },
   };

@@ -1,3 +1,13 @@
+import { motion } from "framer-motion";
+const buttonVariants = {
+  whileHover: {
+    scale: 0.7,
+  },
+  whileTap: {
+    scale: 1.3
+  }
+};
+
 export default function Hero() {
   return (
     <>
@@ -11,8 +21,12 @@ export default function Hero() {
             </p>
           </div>
           <div className="l-side-buttons">
-            <button>Book a demo</button>
-            <button>Deploy Open Source</button>
+            <motion.button variants={buttonVariants} whileHover="whileHover" whileTap="whileTap"> 
+              Book a demo
+            </motion.button>
+            <motion.button variants={buttonVariants} whileHover="whileHover" whileTap="whileTap">
+              Deploy Open Source
+            </motion.button>
           </div>
         </div>
         <div className="r-side"></div>
