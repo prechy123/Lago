@@ -12,8 +12,12 @@ const pricingVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1.3
-    }
+      duration: 1.3,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    ease: "easeInOut",
   },
 };
 
@@ -25,6 +29,7 @@ export default function PricingPlan() {
         variants={pricingVariants}
         initial="initial"
         animate="animate"
+        exit="exit"
       >
         <div className="pricing-title">
           <h1>Fair pricing for all</h1>

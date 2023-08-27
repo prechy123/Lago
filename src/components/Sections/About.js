@@ -1,16 +1,24 @@
 import React from "react";
-import Hero from "./about/Hero"
-import AboutText from "./about/About-text"
-import AboutTeam from "./about/About-team"
+import Hero from "./about/Hero";
+import AboutText from "./about/About-text";
+import AboutTeam from "./about/About-team";
 import Footer from "../default/footer";
+import { motion } from "framer-motion";
+
+const aboutVariant = {
+  exit: {
+    x: "-100vw",
+    ease: "easeInOut",
+  },
+};
 
 export default function About() {
   return (
-    <section id="about">
+    <motion.section id="about" variants={aboutVariant} exit="exit">
       <Hero />
       <AboutText />
       <AboutTeam />
       <Footer />
-    </section>
+    </motion.section>
   );
 }
