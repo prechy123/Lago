@@ -5,16 +5,36 @@ import Solution from "./Solution";
 import Featured from "./Featured";
 import ProductsUpdate from "./ProductsUpdate";
 import Footer from "../default/footer";
+import { motion } from "framer-motion";
+
+const mainVariants = {
+  initial: {
+    x: "-100vw",
+    opacity: 0,
+  },
+  animate: {
+    x: "0",
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 export default function Main() {
   return (
-    <div id="main">
+    <motion.div
+      id="main"
+      variants={mainVariants}
+      initial="initial"
+      animate="animate"
+    >
       <Hero />
       <Next1 />
       <Solution />
       <Featured />
       <ProductsUpdate />
       <Footer />
-    </div>
+    </motion.div>
   );
 }
