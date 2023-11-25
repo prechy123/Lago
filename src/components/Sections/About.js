@@ -11,7 +11,7 @@ const aboutVariant = {
     ease: "easeInOut",
   },
 };
-
+//update
 export default function About() {
   return (
     <motion.section id="about" variants={aboutVariant} exit="exit">
